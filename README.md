@@ -16,16 +16,17 @@ Este repositório contém configurações Terraform para provisionar e gerenciar
 1.2. Inicialize o Terraform:
 
     terraform init
-    Visualize o plano de execução:
 
-1.3. 
+1.3. Visualize o plano de execução:  
     terraform plan
+
 1.4. Aplique a configuração:
 
     terraform apply
-    Para destruir a infraestrutura:
 
-1.5 terraform destroy
+1.5 Para destruir a infraestrutura:
+
+    terraform destroy
 
 
 ### 3. **Documentação Adicional**
