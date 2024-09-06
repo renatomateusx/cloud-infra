@@ -84,7 +84,16 @@ O grupo de Auto Scaling é configurado para ajustar o número de instâncias EC2
 ## Configuração
 
 ```hcl
-resource "aws_autoscaling_group" "web_asg" {
-  # Configuração do Auto Scaling Group
-}```
+resource "aws_launch_configuration" "web" {
+  name          = "web-launch-configuration"
+  image_id      = "ami-0c55b159cbfafe1f0"
+  instance_type = var.instance_type
+  key_name      = aws_key_pair.deployer.key_name
+  security_groups = [aws_security_group.web_sg.name]
+
+  lifecycle {
+    create_before_destroy = true
+  }
+}
+```
 
